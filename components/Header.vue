@@ -1,5 +1,39 @@
 <script setup lang="ts">
-import { NButton } from 'naive-ui'
+import { NButton, NDropdown, useMessage } from 'naive-ui'
+
+const options = [
+  {
+    label: '首页',
+    key: 'index',
+  },
+  {
+    label: '随笔记',
+    key: 'essay',
+  },
+  {
+    label: '闲言',
+    key: 'gossip',
+  },
+  {
+    label: '时光轴',
+    key: 'timeAxis',
+  },
+  {
+    label: '经验分享',
+    key: 'blog',
+  },
+  {
+    label: '酷爱历史',
+    key: 'history',
+  },
+  {
+    label: '关于我',
+    key: 'my',
+  },
+]
+function handleSelect(key: string) {
+  useMessage().success(`你选择了${key}`)
+}
 </script>
 
 <template>
@@ -8,7 +42,9 @@ import { NButton } from 'naive-ui'
       <NButton text strong text-xl @click="navigateTo('/')">
         摸鱼小能手
       </NButton>
-      <div i-prime:align-justify w-8 h-8 />
+      <NDropdown trigger="click" :options="options" @select="handleSelect">
+        <div i-prime:align-justify w-8 h-8 />
+      </NDropdown>
     </div>
   </div>
 </template>

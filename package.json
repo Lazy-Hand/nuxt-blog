@@ -6,21 +6,30 @@
     "dev": "nuxt dev -o",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "text:unit": "vitest"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.9",
+    "@unocss/reset": "^0.51.8"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.38.5",
     "@css-render/vue3-ssr": "^0.15.12",
     "@iconify-json/logos": "^1.1.25",
+    "@iconify-json/prime": "^1.1.5",
+    "@nuxt/test-utils": "^3.4.3",
     "@types/node": "^18",
     "@unocss/nuxt": "^0.51.6",
     "@unocss/transformer-compile-class": "^0.51.8",
     "@unocss/transformer-directives": "^0.51.8",
+    "eslint": "^8.39.0",
     "naive-ui": "^2.34.3",
     "nuxt": "^3.4.2",
-    "nuxt-windicss": "^2.6.1",
-    "sass": "^1.62.0"
-  },
-  "dependencies": {
-    "@unocss/reset": "^0.51.8"
+    "sass": "^1.62.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.0"
   }
 }

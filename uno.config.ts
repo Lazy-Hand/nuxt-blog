@@ -1,12 +1,12 @@
-// @ts-nocheck
 import {
   defineConfig,
   presetAttributify,
-  presetUno,
   presetIcons,
-} from "unocss";
-import transformerDirectives from "@unocss/transformer-directives";
-import transformerCompileClass from "@unocss/transformer-compile-class";
+  presetUno,
+} from 'unocss'
+import transformerDirectives from '@unocss/transformer-directives'
+import transformerCompileClass from '@unocss/transformer-compile-class'
+
 export default defineConfig({
   presets: [
     presetAttributify({
@@ -17,4 +17,4 @@ export default defineConfig({
     presetIcons({}),
   ],
   transformers: [transformerDirectives(), transformerCompileClass()],
-});
+})
